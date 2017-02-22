@@ -1,0 +1,90 @@
+<script type="text/javascript" src="js/jquery.js"></script><script>jQueryWP = jQuery;</script>
+<script type="text/javascript" src="js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+<script type="text/javascript" src="js/cordova.js"></script>
+
+
+
+<script>
+function eliminar(clave) {	
+		var clave = 'psw';
+		var storage = localStorage;
+	 	storage.removeItem(clave);
+	 	alert('Valor eliminado con clave ' + clave);
+	}
+</script>
+
+
+
+
+<script language="javascript">
+	window.onload = function() { 
+	//eliminar();
+}
+</script>
+
+
+<script>
+	function comprobarClave(){ 
+		 var clave1=document.getElementById("clave1").value;
+		 var clave2=document.getElementById("clave2").value;
+		var storage = localStorage;
+		
+		if(clave2==0 && clave1==0)
+		{		
+			var valor="massegura";
+			var clave='psw';
+			storage.setItem(clave, valor);
+			alert("La clave por defecto asignada es: 'massegura'");
+			document.location.href='login.html';	
+		}else if (clave1==0 || clave2==0)
+		{	
+			alert ("Favor completar ambos campos")
+		}	else if (clave1 == clave2) 
+			{			
+				alert("Se registro su clave de manera Exitosa")
+				//ESCRIBIR ARCHIVO .TXT////////////////////////////////////////////////////////////////	
+					var valor=document.getElementById("clave1").value;
+					var clave='psw';
+					storage.setItem(clave, valor);
+					//alert('Valor guardado ' + clave + '=' + valor);
+					document.location.href='login.html';		
+				
+				}else 
+			{		
+				alert("Las dos claves son distintas...") 
+			}
+	} 
+</script>
+
+<SCRIPT language="JavaScript">
+
+	
+</SCRIPT>
+
+
+<link rel="stylesheet" href="css/login.css" type="text/css" >
+
+<body>
+	<div class="container">
+		<div class="login-container">
+			<div id="output"></div>
+			<img src="images/sol.png" style="width:35% " alt="Fondo" id="bg" > 
+			<br/><br/><b
+			<a style="font-size: 25pt;"> Mi Clima </a>
+			<br/><br/>
+			<div class="form-box">
+				<form action="" method="">				
+					<input id="clave1" type="password" placeholder="Ingrese Password" style="font-size: 12pt;background-color: #F2F2F2 ">
+					<br/><br/>
+					<input id="clave2" type="password" placeholder="Reingrese Password" style="font-size: 12pt; background-color: #F2F2F2">
+					<br/><br/>
+					<input type="button" value="Registrar" onClick="comprobarClave()" style="font-size: 16pt; background-color: #2E9AFE; color: white;">
+				</form>
+			</div>
+		</div> 
+		<div id="campo1" ></div>	
+		<!-- <div id="campo1" style="display:none;"></div>	-->
+	</div>
+</body>

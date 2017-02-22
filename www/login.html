@@ -1,0 +1,49 @@
+
+
+<script>
+	function validarPsw(){		
+		var clave1=document.getElementById("clave1").value;
+		var storage = localStorage;
+		for (var i=0; i < storage.length; i++) {
+			var clave = storage.key(i);
+			var valor = storage.getItem(clave);
+			
+		}
+		if (clave1==0)
+		{
+			alert ("Ingrese Clave")
+		}else 
+			if (valor==clave1)
+			{
+				document.location.href='index2.html';
+			}else {
+				alert ("Ingrese Clave Correcta");
+			}
+		
+	}
+</script>
+
+
+<link rel="stylesheet" href="css/login.css" type="text/css" >
+
+<body>
+	<div class="container">
+		<div class="login-container">
+			<div id="output"></div>
+			<img src="images/sol.png" style="width:35% " alt="Fondo" id="bg" > 
+			<br/><br/><b
+			<a style="font-size: 25pt;"> Mi Clima </a>
+			<br/><br/>
+			<div class="form-box">
+				<form action="" method="">				
+					<input id="clave1" type="password" placeholder="Ingrese Password" style="font-size: 12pt;background-color: #F2F2F2 ">
+					<br/><br/>
+					<input type="button" value="Entrar" onClick="validarPsw()" style="font-size: 16pt; background-color: #2E9AFE; color: white;">
+				</form>
+			</div>
+		</div>        
+		
+		
+	</div>
+</body>
+

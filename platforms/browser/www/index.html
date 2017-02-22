@@ -1,48 +1,58 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Notification Example</title>
 
-    <script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
+<script type="text/javascript" src="js/cordova.js"></script>
 
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
+<link rel="stylesheet" href="css/index.css" type="text/css" media="all">
 
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        // Empty
-    }
+<script>
+	function cargarPsw(){ 		
+		var storage = localStorage;
+		for (var i=0; i < storage.length; i++) {
+			var clave = storage.key(i);
+			var valor = storage.getItem(clave);			
+		}
+		
+		if (valor==null)
+		{			
+			alert("Bienvenida a  MAS SEGURA. Para iniciar favor presionar el sol que se encuentra en el centro de la pantalla");
+		}
+		
+	}
+</script>
 
-    // Show a custom alert
-    //
-    function showAlert() {
-        navigator.notification.alert(
-            'You are the winner!',  // message
-            'Game Over',            // title
-            'Done'                  // buttonName
-        );
-    }
 
-    // Beep three times
-    //
-    function playBeep() {
-        navigator.notification.beep(3);
-    }
+<script language="javascript">
+	window.onload = function() { 
+	cargarPsw();
+}
+</script>
 
-    // Vibrate for 2 seconds
-    //
-    function vibrate() {
-        navigator.notification.vibrate(2000);
-    }
+<script>
+	function validar(){ 		
+		var storage = localStorage;
+		for (var i=0; i < storage.length; i++) {
+			var clave = storage.key(i);
+			var valor = storage.getItem(clave);			
+		}
+		
+		if (valor==null)
+		{			
+			document.location.href='index1.html';
+		}else {
+			document.location.href='login.html';
+		}
+		
+	}
+</script>
 
-    </script>
-  </head>
-  <body>
-    <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
-    <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
-    <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
-  </body>
-</html>
+
+
+	<table border=0 width=450>
+		<tr>
+			<td align="left"> 
+				<map name="mapa1"> 
+					<area alt="ingresar" shape="CIRCLE" coords="197,103,30" onclick="validar()"> 
+				</map> 
+				<img src="images/clima2.png" alt="Fondo" id="background" usemap="#mapa1"> 
+			</td>
+		</tr>
+	</table>
