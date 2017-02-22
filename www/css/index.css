@@ -17,7 +17,7 @@ body {
 
   /* La imagen de fondo se reescala cuando se cambia el ancho de ventana
      del navegador */
-  background-size: cover;
+  background-size: contain;
 
   /* Fijamos un color de fondo para que se muestre mientras se está
     cargando la imagen de fondo o si hay problemas para cargarla  */
