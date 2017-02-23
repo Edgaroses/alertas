@@ -21,6 +21,7 @@
 	
     <platform name="android">
         <preference name="android-minSdkVersion" value="14" />
+		<preference name="orientation" value="portrait" />
         <allow-intent href="market:*" />
 		<icon src="www/res/icon/android/icono.png" />
 		<icon src="www/res/icon/android/icon-36-ldpi.png"     density="ldpi" />
@@ -33,37 +34,38 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <preference name="BackupWebStorage" value="none" />
+		<preference name="orientation" value="portrait" />
 		
 			<!-- iPhone 6 / 6+ -->
-            <icon src="www/res/icon/ios/icon-60@3x.png" platform="ios" width="180" height="180" />
+            <icon src="www/res/icon/ios/icon-60@3x.png"  width="180" height="180" />
 
             <!-- iPhone / iPod Touch  -->
-            <icon src="www/res/icon/ios/icon-60.png" platform="ios" width="60" height="60" />
-            <icon src="www/res/icon/ios/icon-60@2x.png" platform="ios" width="120" height="120" />
+            <icon src="www/res/icon/ios/icon-60.png" width="60" height="60" />
+            <icon src="www/res/icon/ios/icon-60@2x.png"  width="120" height="120" />
 
             <!-- iPad -->
-            <icon src="www/res/icon/ios/icon-76.png" platform="ios" width="76" height="76" />
-            <icon src="www/res/icon/ios/icon-76@2x.png" platform="ios" width="152" height="152" />
+            <icon src="www/res/icon/ios/icon-76.png"  width="76" height="76" />
+            <icon src="www/res/icon/ios/icon-76@2x.png"  width="152" height="152" />
 
             <!-- Settings Icon -->
-            <icon src="www/res/icon/ios/icon-small.png" platform="ios" width="29" height="29" />
-            <icon src="www/res/icon/ios/icon-small@2x.png" platform="ios" width="58" height="58" />
+            <icon src="www/res/icon/ios/icon-small.png"  width="29" height="29" />
+            <icon src="www/res/icon/ios/icon-small@2x.png"  width="58" height="58" />
 
             <!-- Spotlight Icon -->
-            <icon src="www/res/icon/ios/icon-40.png" platform="ios" width="40" height="40" />
-            <icon src="www/res/icon/ios/icon-40@2x.png" platform="ios" width="80" height="80" />
+            <icon src="www/res/icon/ios/icon-40.png"  width="40" height="40" />
+            <icon src="www/res/icon/ios/icon-40@2x.png"  width="80" height="80" />
 
             <!-- iPhone / iPod Touch -->
-            <icon src="www/res/icon/ios/icon-ipod.png" platform="ios" width="57" height="57" />
-            <icon src="www/res/icon/ios/icon-ipod@2x.png" platform="ios" width="114" height="114" />
+            <icon src="www/res/icon/ios/icon-ipod.png"  width="57" height="57" />
+            <icon src="www/res/icon/ios/icon-ipod@2x.png"  width="114" height="114" />
 
             <!-- iPad -->
-            <icon src="www/res/icon/ios/icon-72.png" platform="ios" width="72" height="72" />
-            <icon src="www/res/icon/ios/icon-72@2x.png" platform="ios" width="144" height="144" />
+            <icon src="www/res/icon/ios/icon-72.png"  width="72" height="72" />
+            <icon src="www/res/icon/ios/icon-72@2x.png"  width="144" height="144" />
 
             <!-- iPad Spotlight and Settings Icon -->
-            <icon src="www/res/icon/ios/icon-50.png" platform="ios" width="50" height="50" />
-            <icon src="www/res/icon/ios/icon-50@2x.png" platform="ios" width="100" height="100" />		
+            <icon src="www/res/icon/ios/icon-50.png"  width="50" height="50" />
+            <icon src="www/res/icon/ios/icon-50@2x.png"  width="100" height="100" />		
 		
     </platform>
 	
