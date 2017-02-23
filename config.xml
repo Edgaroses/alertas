@@ -38,39 +38,31 @@
     </platform>
 	
 	<platform name="ios">
-		<!--iOS 8.0 +--> 
-		<!--iPhone Plus 6--> 
 		
 		<icon src="ios/icon-60@3x.png" width="180" height = "180" />
 		<icon src="ios/icono.png" />
 					
-		<!--iOS 7.0 +--> 
-		<!--iPhone / iPod Touch-->
 		<icon src="ios/icon-60.png"  width="60" height="60" />
 		<icon src="ios/icon-60@2x.png"  width="120" height="120" />	
 		
-		<!-- iPad -->
 		<icon src="ios/icon-76.png" width="76" height="76" />
 		<icon src="ios/icon-76@2x.png" width="152" height="152" />
 				
-		<!--iOS 6.1--> 
-		<!--icon Spotlight--> 	
+			
 		<icon src="ios/icon-40.png"  width="40" height="40" />
 		<icon src="ios/icon-40@2x.png"  width="80" height="80" />
 		
-		<!--iPhone / iPod Touch--> 
+		
 		<icon src="ios/icon.png"  width="57"  height="57" />
 		<icon src="ios/icon@2x.png"  width="114" height="114" />
 		
-		<!--iPad--> 
 		<icon src="ios/icon-72.png"  width= "72" height="72" />
 		<icon src="ios/icon-72@2x.png" width="144" height="144" />
 		
-		<!--iPhone Spotlight y el icon Configuración--> 
+		
 		<icon src="ios/icon-small.png" width="29" height="29" />
 		<icon src="ios/icon-small@2x.png"  width="58" height="58" />
 		
-		<!--iPad Spotlight y el icon Configuración--> 
 		<icon src="ios/icon-50.png"  width="50" height="50" />
 		<icon src="ios/icon-50@2x.png"  width="100" height="100" />
 	</platform>
