@@ -1,4 +1,48 @@
 
+<script src="phonegap.js"></script>
+<script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Empty
+    }
+
+    // Show a custom alert
+    //
+    function errorClave1() {
+        navigator.notification.alert(
+            'Ingrese Clave',  // message
+            'Mi Clima',            // title
+            'Ingreso'                  // buttonName
+        );
+    };
+	
+	function errorClave2() {
+        navigator.notification.alert(
+            'Ingrese Clave Correcta',  // message
+            'Mi Clima',            // title
+            'Ingreso'                  // buttonName
+        );
+    }
+
+    // Beep three times
+    //
+    function playBeep() {
+        navigator.notification.beep(3);
+    }
+
+    // Vibrate for 2 seconds
+    //
+    function vibrate() {
+        navigator.notification.vibrate(2000);
+    }
+
+    </script>
 
 <script>
 	function validarPsw(){		
@@ -11,13 +55,15 @@
 		}
 		if (clave1==0)
 		{
-			alert ("Ingrese Clave")
+			errorClave1();return false;
+			//alert ("Ingrese Clave")
 		}else 
 			if (valor==clave1)
 			{
 				document.location.href='index2.html';
 			}else {
-				alert ("Ingrese Clave Correcta");
+				errorClave2();return false;
+				//alert ("Ingrese Clave Correcta");
 			}
 		
 	}

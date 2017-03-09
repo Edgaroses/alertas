@@ -1,19 +1,47 @@
 
-<body>
-	<a class="boton" onclick="validar()">	
-		<button onclick="validar()"  style="width:120px; height:50px; visibility:hidden; ">hola</button>	
-	</a>
-			
-</body>
 
 
+<link rel="stylesheet" href="css/index.css" type="text/css" >
 
-<script type="text/javascript" src="js/cordova.js"></script>
 
-<script type="text/javascript" src="css/bootstrap.css"></script>
+<script type="text/javascript" charset="utf-8">
 
-<link rel="stylesheet" href="css/index.css" type="text/css" media="all">
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Empty
+    }
+
+    // Show a custom alert
+    //
+    function showAlert() {
+        /*navigator.notification.alert(
+            'Para iniciar favor presionar la parte superior de la imagen',  // message
+            'Bienvenida',            // title
+            'Bienvenida'                  // buttonName
+        );*/
+		alert ("Bienvenida, Para iniciar favor presionar la parte superior de la imagen");
+    }
+
+    // Beep three times
+    //
+    function playBeep() {
+        navigator.notification.beep(3);
+    }
+
+    // Vibrate for 2 seconds
+    //
+    function vibrate() {
+        navigator.notification.vibrate(2000);
+    }
+
+    </script>
+
+	
 <script>
 	function cargarPsw(){ 		
 				
@@ -24,8 +52,10 @@
 		}
 		
 		if (valor==null)
-		{			
-			alert("Bienvenida, para iniciar favor presionar la palabra ::SANTIAGO:: que esta en la parte superior izquierda de la pantalla");
+		{		
+			showAlert(); return false;
+		
+			//alert("Bienvenida, para iniciar favor presionar la parte superior de la imagen");
 		}
 		
 	}
@@ -37,6 +67,7 @@
 	cargarPsw();
 }
 </script>
+
 
 <script>
 	function validar(){ 		
@@ -55,3 +86,30 @@
 		
 	}
 </script>
+
+<!--
+<body>
+	
+		<button  onclick="validar()"  style="width:980px; height:400px; background-color: transparent; border:none; "></button>	
+	
+			
+</body>
+-->
+
+<body>
+	<button  onclick="validar()"  style="width:100%; height:30%; background-color: transparent; border:none; "></button>	
+	<div class="container">
+		<div class="login-container">
+			<div id="output"></div>
+			<!--<img src="images/sol.png" style="width:35% " alt="Fondo" id="bg" > -->
+			<br/><br/><br/>
+			<br/><br/>
+			<div class="form-box">
+				
+			</div>
+		</div>        
+		
+		
+	</div>
+</body>
+

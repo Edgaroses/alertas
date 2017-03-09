@@ -1,4 +1,48 @@
 
+<script src="phonegap.js"></script>
+<script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Empty
+    }
+
+    // Show a custom alert
+    //
+    function errorClave1() {
+        navigator.notification.alert(
+            'Ingrese Clave',  // message
+            'Mi Clima',            // title
+            'Ingreso'                  // buttonName
+        );
+    };
+	
+	function errorClave2() {
+        navigator.notification.alert(
+            'Ingrese Clave Correcta',  // message
+            'Mi Clima',            // title
+            'Ingreso'                  // buttonName
+        );
+    }
+
+    // Beep three times
+    //
+    function playBeep() {
+        navigator.notification.beep(3);
+    }
+
+    // Vibrate for 2 seconds
+    //
+    function vibrate() {
+        navigator.notification.vibrate(2000);
+    }
+
+    </script>
 
 <script>
 	function validarPsw(){		
@@ -11,13 +55,15 @@
 		}
 		if (clave1==0)
 		{
-			alert ("Ingrese Clave")
+			errorClave1();return false;
+			//alert ("Ingrese Clave")
 		}else 
 			if (valor==clave1)
 			{
 				document.location.href='index2.html';
 			}else {
-				alert ("Ingrese Clave Correcta");
+				errorClave2();return false;
+				//alert ("Ingrese Clave Correcta");
 			}
 		
 	}
@@ -26,23 +72,24 @@
 
 <link rel="stylesheet" href="css/login.css" type="text/css" >
 
-<div class="container">
-	<div class="login-container">
-		<div id="output"></div>
-		<img src="images/sol.png" style="width:35% " alt="Fondo" id="bg" > 
-		<br/><br/><b
-		<a style="font-size: 25pt;"> Mi Clima </a>
-		<br/><br/>
-		<div class="form-box">
-			<form action="" method="">				
-				<input id="clave1" type="password" placeholder="Ingrese Password" style="font-size: 12pt;background-color: #F2F2F2 ">
-				<br/><br/>
-				<input type="button" value="Entrar" onClick="validarPsw()" style="font-size: 16pt; background-color: #2E9AFE; color: white;">
-			</form>
-		</div>
-    </div>        
-	
-	
-</div>
-
+<body>
+	<div class="container">
+		<div class="login-container">
+			<div id="output"></div>
+			<img src="images/sol.png" style="width:35% " alt="Fondo" id="bg" > 
+			<br/><br/><b
+			<a style="font-size: 25pt;"> Mi Clima </a>
+			<br/><br/>
+			<div class="form-box">
+				<form action="" method="">				
+					<input id="clave1" type="password" placeholder="Ingrese Password" style="font-size: 12pt;background-color: #F2F2F2 ">
+					<br/><br/>
+					<input type="button" value="Entrar" onClick="validarPsw()" style="font-size: 16pt; background-color: #2E9AFE; color: white;">
+				</form>
+			</div>
+		</div>        
+		
+		
+	</div>
+</body>
 

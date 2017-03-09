@@ -1,10 +1,50 @@
 
-<script type="text/javascript" src="js/cordova.js"></script>
+<script src="phonegap.js"></script>
 
-<link rel="stylesheet" href="css/index.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/login.css" type="text/css" >
 
+
+<script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Empty
+    }
+
+    // Show a custom alert
+    //
+    function showAlert() {
+        /*navigator.notification.alert(
+            'Para iniciar favor presionar la parte superior de la imagen',  // message
+            'Bienvenida',            // title
+            'Bienvenida'                  // buttonName
+        );*/
+		alert ("Bienvenida, Para iniciar favor presionar la parte superior de la imagen");
+    }
+
+    // Beep three times
+    //
+    function playBeep() {
+        navigator.notification.beep(3);
+    }
+
+    // Vibrate for 2 seconds
+    //
+    function vibrate() {
+        navigator.notification.vibrate(2000);
+    }
+
+    </script>
+
+	
 <script>
 	function cargarPsw(){ 		
+				
 		var storage = localStorage;
 		for (var i=0; i < storage.length; i++) {
 			var clave = storage.key(i);
@@ -12,8 +52,10 @@
 		}
 		
 		if (valor==null)
-		{			
-			alert("Bienvenida a  MAS SEGURA. Para iniciar favor presionar el sol que se encuentra en el centro de la pantalla");
+		{		
+			showAlert(); return false;
+		
+			//alert("Bienvenida, para iniciar favor presionar la parte superior de la imagen");
 		}
 		
 	}
@@ -25,6 +67,7 @@
 	cargarPsw();
 }
 </script>
+
 
 <script>
 	function validar(){ 		
@@ -44,15 +87,10 @@
 	}
 </script>
 
+<body>
+	
+		<button  onclick="validar()"  style="width:980px; height:400px; background-color: transparent; border:none; "></button>	
+	
+			
+</body>
 
-
-	<table border=0 width=450>
-		<tr>
-			<td align="left"> 
-				<map name="mapa1"> 
-					<area alt="ingresar" shape="CIRCLE" coords="197,103,30" onclick="validar()"> 
-				</map> 
-				<img src="images/clima2.png" alt="Fondo" id="background" usemap="#mapa1"> 
-			</td>
-		</tr>
-	</table>

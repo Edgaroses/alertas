@@ -1,5 +1,4 @@
 
-
 body {
   /* Ubicación de la imagen */
   background-image: url(../images/clima.png);
@@ -21,10 +20,10 @@ body {
 
   /* Fijamos un color de fondo para que se muestre mientras se está
     cargando la imagen de fondo o si hay problemas para cargarla  */
-  background-color: #464646;
+  background-color: rgb(8,27,67);
 }
 
-.boton{
-	top:  200px; 
-	left: 430px;
+html,body{
+    position: relative;
+    height: 100%;
 }

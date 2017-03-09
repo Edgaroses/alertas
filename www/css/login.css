@@ -20,7 +20,7 @@ body {
 
   /* Fijamos un color de fondo para que se muestre mientras se está
     cargando la imagen de fondo o si hay problemas para cargarla  */
-  background-color: #464646;
+  background-color: rgb(8,27,67);
 }
 
 html,body{
